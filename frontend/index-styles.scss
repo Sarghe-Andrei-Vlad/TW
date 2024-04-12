@@ -1,0 +1,150 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 75px;
+}
+
+.title {
+    flex: 1;
+    text-align: center;
+}
+
+.title-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.title-link:hover {
+    text-decoration: none;
+}
+
+.login-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+.open-menu-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    padding: 10px 20px;
+}
+
+.side-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.close-menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.side-menu.show {
+    right: 0;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+}
+
+.homepage-photo-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.homepage-photo img {
+    max-width: 100%;
+}
+
+.newsletter-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li {
+    margin: 0 10px; /* Adjust spacing as needed */
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
