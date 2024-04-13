@@ -90,6 +90,16 @@ header {
   margin-top: 50px;
 }
 
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters select {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
 .container {
   max-width: 1224px;
   width: 90%;
