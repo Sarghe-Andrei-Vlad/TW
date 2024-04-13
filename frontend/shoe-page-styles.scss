@@ -31,23 +31,23 @@ header {
     text-decoration: none;
 }
 
-.logout-btn {
-    background-color: #f6bd88;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+// .logout-btn {
+//     background-color: #f6bd88;
+//     border: none;
+//     color: white;
+//     padding: 10px 20px;
+//     text-align: center;
+//     text-decoration: none;
+//     display: inline-block;
+//     font-size: 16px;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+// }
 
-.logout-btn:hover {
-    background-color: #9c7b42;
-}
+// .logout-btn:hover {
+//     background-color: #9c7b42;
+// }
 
 .open-menu-btn {
     background: none;
@@ -103,18 +103,31 @@ header {
     padding: 20px;
 }
 
-.shoe-photo-section {
+.recommendation-header {
     text-align: center;
     margin-top: 50px;
+    // padding-left: 20px;
+}
+
+.recommendation-details-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shoe-photo {
+    flex: 0 0 50%;
+    padding-left: 20px;
 }
 
 .shoe-photo img {
-    max-width: 400px;
+    // max-width: 100%;
+    max-width: 600px;
 }
 
-.description-section {
-    text-align: center;
-    margin-top: 50px;
+.shoe-description {
+    flex: 0 0 50%;
+    padding-left: 20px;
 }
 
 /* ------ */
