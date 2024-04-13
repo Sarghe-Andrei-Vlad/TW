@@ -103,13 +103,28 @@ header {
     padding: 20px;
 }
 
+.shoe-photo-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.shoe-photo img {
+    max-width: 400px;
+}
+
+.description-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
 /* ------ */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-    position: fixed;
+    // position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }

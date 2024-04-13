@@ -118,6 +118,7 @@ header {
 .newsletter-section {
     text-align: center;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* Footer */
@@ -126,7 +127,8 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
-    position: fixed;
+    // position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
