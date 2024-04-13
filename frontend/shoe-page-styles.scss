@@ -1,11 +1,9 @@
-/* General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header */
 header {
     background-color: #333;
     color: #fff;
@@ -33,7 +31,7 @@ header {
     text-decoration: none;
 }
 
-.login-btn {
+.logout-btn {
     background-color: #f6bd88;
     border: none;
     color: white;
@@ -47,7 +45,7 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.login-btn:hover {
+.logout-btn:hover {
     background-color: #9c7b42;
 }
 
@@ -59,7 +57,6 @@ header {
     cursor: pointer;
 }
 
-/* Side Menu */
 .side-menu {
     position: fixed;
     top: 0;
@@ -101,26 +98,12 @@ header {
     right: 0;
 }
 
-/* Main Content */
+/* to do */
 .main-content {
     padding: 20px;
 }
 
-.homepage-photo-section {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.homepage-photo img {
-    max-width: 100%;
-}
-
-.newsletter-section {
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* Footer */
+/* ------ */
 footer {
     background-color: #333;
     color: #fff;
