@@ -80,38 +80,60 @@ header {
     right: 0;
 }
 
-/* in progress */
 .main-content {
     padding: 20px;
 }
 
-.recommendation-header {
+/* in progress */
+.filter-header {
     text-align: center;
     margin-top: 50px;
 }
 
-.recommendation-details-section {
+.container {
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+// .title {
+//     // margin-bottom: 2rem;
+// }
+
+.photo-gallery {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 20px;
 }
 
-.shoe-photo {
-    flex: 0 0 50%;
-    padding-left: 20px;
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.shoe-photo img {
-    // max-width: 100%;
-    max-width: 600px;
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 0 0 20px 2px rgb(207, 200, 193);
+    transition: 1s;
+}
+.photo:hover {
+    transform: scale(1.05);
+    // z-index: 2; no need for now
 }
 
-.shoe-description {
-    flex: 0 0 50%;
-    padding-left: 20px;
+@media(max-width:768px) {
+    .photo-gallery {
+        flex-direction: column;
+    }
 }
 /* ----------- */
 
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
