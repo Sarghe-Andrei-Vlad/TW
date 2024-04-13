@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footwear Smart Assistant</title>
+    <title>Register</title>
     <link rel="stylesheet" href="index-styles.css">
+    <link rel="stylesheet" href="register-styles.css">
     <script src="sidemenu-script.js"></script>
 </head>
 
@@ -18,9 +19,6 @@
         <div class="title">
             <h1><a href="index.html" class="title-link">Footwear Smart Assistant</a></h1>
         </div>
-        <a href="login.html">
-            <button class="login-btn">Login</button>
-        </a>
         <button class="open-menu-btn">&#9776;</button>
     </header>
 
@@ -35,23 +33,31 @@
         <button class="close-menu-btn">&times;</button>
     </nav>
 
-    <main>
-        <section class="homepage-photo-section">
-            <h2>Discover Our Collection</h2>
-            <div class="homepage-photo">
-                <img src="homepage-photo.jpg" alt="Homepage Photo">
-            </div>
-        </section>
-
-        <section class="newsletter-section">
-            <h2>Subscribe to our Newsletter</h2>
-            <p>Get the latest footwear trends and tips straight to your inbox!</p>
-            <form action="subscribe.php" method="POST">
-                <input type="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit" class="subscribe-btn">Subscribe</button>
+    <main class="register-container">
+        <div class="register-box">
+            <h2>CREATE YOUR ACCOUNT</h2>
+            <form action="register.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" class="input-field"
+                        placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="input-field" placeholder="Enter your email"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="input-field"
+                        placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="register-btn">CREATE ACCOUNT</button>
+                <p>Already registered? <a href="login.html">SIGN IN</a></p>
             </form>
-        </section>
+        </div>
     </main>
+
 
     <footer>
         <div class="footer-content">
