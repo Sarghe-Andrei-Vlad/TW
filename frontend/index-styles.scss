@@ -120,15 +120,34 @@ header {
     margin-top: 50px;
 }
 
+.subscribe-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #333;
+}
+
 /* Footer */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
+    margin-top: 30px;
 }
 
 .footer-content {
@@ -141,7 +160,7 @@ footer nav ul {
 }
 
 footer nav ul li {
-    margin: 0 10px; /* Adjust spacing as needed */
+    margin: 0 10px;
 }
 
 footer nav ul li a {
