@@ -51,8 +51,8 @@ header {
 .side-menu {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 100%;
+    right: -250px;
+    width: 250px;
     height: 100%;
     background-color: #333;
     padding-top: 60px;
@@ -98,6 +98,9 @@ footer {
     bottom: 0;
     width: 100%;
     margin-top: 20px;
+    padding: 0.5em 5%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .footer-content {
