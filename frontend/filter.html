@@ -28,67 +28,82 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="filter.html">Products & Outfits</a></li>
             <li><a href="#">Suggestions & Sharing</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="#">Logout</a></li>
         </ul>
         <button class="close-menu-btn">&times;</button>
     </nav>
 
     <main>
-        <!-- working on it -->
         <div class="filter-header">
             <h2>Here are the most popular choices this season</h2>
         </div>
 
-        <div class="filters">
-            <select name="season" multiple>
-                <option value="spring">Spring</option>
-                <option value="summer">Summer</option>
-                <option value="autumn">Autumn</option>
-                <option value="winter">Winter</option>
-            </select>
-            <select name="weather" multiple>
-                <option value="sunny">Sunny</option>
-                <option value="rainy">Rainy</option>
-                <option value="cold">Cold</option>
-                <option value="windy">Windy</option>
-                <!-- to do: add more options -->
-            </select>
-            <select name="gender" multiple>
-                <option value="male">Sunny</option>
-                <option value="female">Rainy</option>
-                <!-- to do: add more options ?? -->
-            </select>
-            <select name="age" multiple>
-                <option value="child">Child</option>
-                <option value="teen">Teen</option>
-                <option value="adult">Adult</option>
-                <!-- to do: add more options  -->
-            </select>
-            <select name="color" multiple>
-                <option value="black">Black</option>
-                <option value="white">White</option>
-                <option value="brown">Brown</option>
-                <option value="grey">Grey</option>
-                <option value="pink">Pink</option>
-                <option value="purple">Purple</option>
-                <option value="blue">Blue</option>
-                <option value="red">Red</option>
-                <option value="green">Green</option>
-                <!-- to do: add more options  -->
-            </select>
-            <select name="pattern" multiple>
-                <option value="plain">Plain</option>
-                <option value="dots">Dots</option>
-                <option value="stripes">Stripes</option>
-                <!-- to do: add more options  -->
-            </select>
-            <!-- to do: add more filters -->
-        </div>
+            <div id="recommendation-filter">
+                <div class="filter-category" onclick="toggleDropdown('season')">
+                  <h3>Season</h3>
+                  <div id="season" class="dropdown">
+                    <div class="option" onclick="selectOption(this)">Spring</div>
+                    <div class="option" onclick="selectOption(this)">Summer</div>
+                    <div class="option" onclick="selectOption(this)">Autumn</div>
+                    <div class="option" onclick="selectOption(this)">Winter</div>
+                  </div>
+                </div>
+                <div class="filter-category" onclick="toggleDropdown('weather')">
+                  <h3>Weather</h3>
+                  <div id="weather" class="dropdown">
+                    <div class="option" onclick="selectOption(this)">Sunny</div>
+                    <div class="option" onclick="selectOption(this)">Rainy</div>
+                    <div class="option" onclick="selectOption(this)">Cold</div>
+                    <div class="option" onclick="selectOption(this)">Windy</div>
+                    <div class="option" onclick="selectOption(this)">Snowy</div>
+                  </div>
+                </div>
+                <div class="filter-category" onclick="toggleDropdown('gender')">
+                    <h3>Gender</h3>
+                    <div id="gender" class="dropdown">
+                      <div class="option" onclick="selectOption(this)">Male</div>
+                      <div class="option" onclick="selectOption(this)">Female</div>
+                      <div class="option" onclick="selectOption(this)">Unisex</div>
+                    </div>
+                </div>
+                <div class="filter-category" onclick="toggleDropdown('age')">
+                    <h3>Age</h3>
+                    <div id="age" class="dropdown">
+                      <div class="option" onclick="selectOption(this)">Child</div>
+                      <div class="option" onclick="selectOption(this)">Teen</div>
+                      <div class="option" onclick="selectOption(this)">Adult</div>
+                    </div>
+                </div>
+                <div class="filter-category" onclick="toggleDropdown('color')">
+                    <h3>Color</h3>
+                    <div id="color" class="dropdown">
+                      <div class="option" onclick="selectOption(this)">Black</div>
+                      <div class="option" onclick="selectOption(this)">White</div>
+                      <div class="option" onclick="selectOption(this)">Brown</div>
+                      <div class="option" onclick="selectOption(this)">Grey</div>
+                      <div class="option" onclick="selectOption(this)">Navy</div>
+                      <div class="option" onclick="selectOption(this)">Pink</div>
+                      <div class="option" onclick="selectOption(this)">Purple</div>
+                      <div class="option" onclick="selectOption(this)">Red</div>
+                      <div class="option" onclick="selectOption(this)">Green</div>
+                      <div class="option" onclick="selectOption(this)">Light blue</div>
+                    </div>
+                </div>
+                <div class="filter-category" onclick="toggleDropdown('pattern')">
+                    <h3>Pattern</h3>
+                    <div id="pattern" class="dropdown">
+                      <div class="option" onclick="selectOption(this)">Plain</div>
+                      <div class="option" onclick="selectOption(this)">Dots</div>
+                      <div class="option" onclick="selectOption(this)">Stripes</div>
+                    </div>
+                </div>
+                <!-- to add: more categories if needed -->
+              </div>
 
-        <div class="container">
-            <h2 class="title">Shoe gallery [we'll have some filters here]</h2>
+        <div class="gallery-container">
+            <h2 class="title">Shoe gallery</h2>
             <div class="photo-gallery">
 
                 <div class="column">
@@ -145,6 +160,8 @@
         </div>
         <p>&copy; 2024 Shoe Recommendation Platform. All rights reserved.</p>
     </footer>
+
+    <script src="scripts/filter-dropdown-script.js"></script>
 </body>
 
 </html>

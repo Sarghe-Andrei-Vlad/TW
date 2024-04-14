@@ -1,86 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo img {
-    width: 75px;
-}
-
-.title {
-    flex: 1;
-    text-align: center;
-}
-
-.title-link {
-    color: #fff;
-    text-decoration: none;
-}
-
-.title-link:hover {
-    text-decoration: none;
-}
-
-.open-menu-btn {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.side-menu {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    padding-top: 60px;
-    transition: right 0.3s ease;
-}
-
-.side-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.side-menu ul li {
-    padding: 10px 20px;
-}
-
-.side-menu ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.close-menu-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.side-menu.show {
-    right: 0;
-}
-
-/* in progress */
 .main-content {
     padding: 20px;
 }
@@ -98,45 +15,75 @@ header {
 
 .shoe-photo {
     flex: 0 0 50%;
-    padding-left: 20px;
 }
 
 .shoe-photo img {
-    // max-width: 100%;
-    max-width: 600px;
+    max-width: 90%;
 }
 
 .shoe-description {
     flex: 0 0 50%;
-    padding-left: 20px;
 }
-/* ----------- */
 
-footer {
+@media screen and (max-width: 768px) {
+    .recommendation-details-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shoe-photo img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .shoe-description {
+        padding-left: 0;
+    }
+}
+
+.user-review-section {
+    margin-top: 50px;
+}
+
+.user-review-section h2 {
+    text-align: center;
+}
+
+.user-review-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.user-review-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.user-review-section textarea, .user-review-section input[type="text"], .user-review-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.user-review-section input[type="submit"] {
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
     width: 100%;
-    margin-top: 30px;
+    border-radius: 5px;
 }
 
-.footer-content {
-    margin-bottom: 20px;
+.user-review-section input[text="submit"]:hover {
+    background-color: rgb(52, 51, 51);
 }
 
-footer nav ul {
-    display: flex;
-    justify-content: center;
-}
-
-footer nav ul li {
-    margin: 0 10px;
-}
-
-footer nav ul li a {
-    color: #fff;
-    text-decoration: none;
+@media screen and (max-width: 768px) {
+    .user-review-section form {
+        padding: 0 20px;
+    }
 }

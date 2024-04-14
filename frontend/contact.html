@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Footwear Smart Assistant</title>
     <link rel="stylesheet" href="styles/general-styles.css">
-    <link rel="stylesheet" href="styles/register-styles.css">
+    <link rel="stylesheet" href="styles/about-styles.css">
     <script src="scripts/sidemenu-script.js"></script>
 </head>
 
 <body>
-
     <header>
         <div class="logo">
             <a href="index.html">
@@ -31,35 +30,35 @@
             <li><a href="#">Suggestions & Sharing</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Logout</a></li>
         </ul>
         <button class="close-menu-btn">&times;</button>
     </nav>
 
-    <main class="register-container">
-        <div class="register-box">
-            <h2>CREATE YOUR ACCOUNT</h2>
-            <form action="register.php" method="POST">
-                <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" class="input-field"
-                        placeholder="Enter your username" required>
+    <main>
+        <!-- to do -->
+        <section class="contact-section">
+            <div class="info-container">
+                <h2>Contact Us</h2>
+                <p>Have a question, comment or suggestion? We'd love to hear from you! 
+                    Reach out to us via phone or email.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>contact@shoerecommendations.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p>+40723222222</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>str. General Henri Mathias Berthelot 16, Iași 700483</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="input-field" placeholder="Enter your email"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" class="input-field"
-                        placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="register-btn">CREATE ACCOUNT</button>
-                <p>Already registered? <a href="login.html">SIGN IN</a></p>
-            </form>
-        </div>
+            </div>
+        </section>
     </main>
-
 
     <footer>
         <div class="footer-content">
@@ -73,7 +72,6 @@
         </div>
         <p>&copy; 2024 Shoe Recommendation Platform. All rights reserved.</p>
     </footer>
-
 </body>
 
 </html>
