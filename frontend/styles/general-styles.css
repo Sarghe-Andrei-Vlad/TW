@@ -1,11 +1,9 @@
-/* General */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Header */
 header {
   background-color: #333;
   color: #fff;
@@ -46,7 +44,6 @@ header {
     display: none;
   }
 }
-/* Side Menu */
 .side-menu {
   position: fixed;
   top: 0;
@@ -88,12 +85,10 @@ header {
   right: 0;
 }
 
-/* Footer */
 footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  position: relative;
   bottom: 0;
   width: 100%;
   margin-top: 20px;
