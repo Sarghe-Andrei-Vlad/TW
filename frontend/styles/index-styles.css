@@ -34,7 +34,7 @@ header {
 }
 
 .login-btn {
-  background-color: #4CAF50;
+  background-color: #f6bd88;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -48,7 +48,7 @@ header {
 }
 
 .login-btn:hover {
-  background-color: #45a049;
+  background-color: #9c7b42;
 }
 
 .open-menu-btn {
@@ -118,6 +118,7 @@ header {
 .newsletter-section {
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .subscribe-btn {

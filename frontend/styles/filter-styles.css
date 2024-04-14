@@ -1,0 +1,170 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 75px;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+}
+
+.title-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.title-link:hover {
+  text-decoration: none;
+}
+
+.open-menu-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  padding-top: 60px;
+  transition: right 0.3s ease;
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu ul li {
+  padding: 10px 20px;
+}
+
+.side-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.close-menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.side-menu.show {
+  right: 0;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+/* in progress */
+.filter-header {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters select {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 1224px;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.photo-gallery {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  box-shadow: 0 0 20px 2px rgb(207, 200, 193);
+  transition: 1s;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .photo-gallery {
+    flex-direction: column;
+  }
+}
+/* ----------- */
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.footer-content {
+  margin-bottom: 20px;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer nav ul li {
+  margin: 0 10px;
+}
+
+footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}/*# sourceMappingURL=filter-styles.css.map */

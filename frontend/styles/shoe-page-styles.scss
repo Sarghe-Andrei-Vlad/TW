@@ -1,11 +1,9 @@
-/* General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header */
 header {
     background-color: #333;
     color: #fff;
@@ -33,24 +31,6 @@ header {
     text-decoration: none;
 }
 
-.login-btn {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.login-btn:hover {
-    background-color: #45a049;
-}
-
 .open-menu-btn {
     background: none;
     border: none;
@@ -59,7 +39,6 @@ header {
     cursor: pointer;
 }
 
-/* Side Menu */
 .side-menu {
     position: fixed;
     top: 0;
@@ -101,44 +80,38 @@ header {
     right: 0;
 }
 
-/* Main Content */
+/* in progress */
 .main-content {
     padding: 20px;
 }
 
-.homepage-photo-section {
+.recommendation-header {
     text-align: center;
     margin-top: 50px;
 }
 
-.homepage-photo img {
-    max-width: 100%;
+.recommendation-details-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.newsletter-section {
-    text-align: center;
-    margin-top: 50px;
+.shoe-photo {
+    flex: 0 0 50%;
+    padding-left: 20px;
 }
 
-.subscribe-btn {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.shoe-photo img {
+    // max-width: 100%;
+    max-width: 600px;
 }
 
-.subscribe-btn:hover {
-    background-color: #333;
+.shoe-description {
+    flex: 0 0 50%;
+    padding-left: 20px;
 }
+/* ----------- */
 
-/* Footer */
 footer {
     background-color: #333;
     color: #fff;

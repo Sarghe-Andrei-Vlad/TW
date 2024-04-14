@@ -4,14 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles/index-styles.css">
-    <link rel="stylesheet" href="styles/login-styles.css">
+    <title>Footwear Smart Assistant</title>
+    <link rel="stylesheet" href="styles/shoe-page-styles.css">
     <script src="script/sidemenu-script.js"></script>
 </head>
 
 <body>
-
     <header>
         <div class="logo">
             <img src="resources/logo.png" alt="Footwear Smart Assistant">
@@ -29,30 +27,27 @@
             <li><a href="#">Suggestions & Sharing</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a href="#">Logout</a></li>
         </ul>
         <button class="close-menu-btn">&times;</button>
     </nav>
 
-    <main class="login-container">
-        <div class="login-box">
-            <h2>CONNECT TO YOUR ACCOUNT</h2>
-            <form action="login.php" method="POST">
-                <div class="form-group">
-                    <input type="email" id="email" name="email" class="input-field" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" id="password" name="password" class="input-field" placeholder="Password"
-                        required>
-                </div>
-                <button type="submit" class="login-btn">LOGIN</button>
-            </form>
-
-            <h2>ARE YOU A NEW CUSTOMER?</h2>
-            <p>Join us now to discover the latest trends and recommendations!</p>
-            <a href="register.html" class="register-btn">REGISTER NOW</a>
+    <main>
+        <!-- working on it -->
+        <div class="recommendation-header">
+            <h2>Here is our recommendation</h2>
         </div>
+        <section class="recommendation-details-section">
+            <div class="shoe-photo">
+                <img src="resources/generic-shoe.jpg" alt="Shoe Photo">
+            </div>
+            <div class="shoe-description">
+                <h2>Shoe Description</h2>
+                <p>For dancing ceremonies we abvise you to wear shoes with stainless steel heels.</p>
+                <!-- to do: add more text to shoe description -->
+            </div>
+        </section>
     </main>
-
 
     <footer>
         <div class="footer-content">
@@ -66,7 +61,6 @@
         </div>
         <p>&copy; 2024 Shoe Recommendation Platform. All rights reserved.</p>
     </footer>
-
 </body>
 
 </html>
