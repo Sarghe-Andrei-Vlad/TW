@@ -41,6 +41,11 @@ header {
   cursor: pointer;
 }
 
+@media screen and (max-width: 650px) {
+  .title {
+    display: none;
+  }
+}
 /* Side Menu */
 .side-menu {
   position: fixed;

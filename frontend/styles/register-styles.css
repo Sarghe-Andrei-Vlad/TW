@@ -11,8 +11,16 @@ main {
   align-items: center;
 }
 
+@media screen and (max-width: 1000px) {
+  .register-container {
+    min-width: 500px;
+  }
+  .form-group {
+    min-width: 200px;
+  }
+}
 .register-box {
-  width: 300px;
+  width: calc(50% - 20px);
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -34,7 +42,6 @@ main {
 }
 
 .register-btn {
-  width: calc(100% - 20px);
   padding: 10px;
   background-color: #4CAF50;
   color: white;
