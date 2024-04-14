@@ -30,6 +30,12 @@
     max-width: 100%;
 }
 
+@media screen and (max-width: 1000px) {
+    .homepage-photo img {
+        max-width: 80%;
+    }
+}
+
 .newsletter-section {
     text-align: center;
     margin-top: 50px;
