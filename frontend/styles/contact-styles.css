@@ -1,0 +1,38 @@
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  margin: 0 20px;
+}
+
+.contact-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 18px;
+}/*# sourceMappingURL=contact-styles.css.map */

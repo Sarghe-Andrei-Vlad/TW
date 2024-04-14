@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footwear Smart Assistant</title>
-    <link rel="icon" href="resources/logo.png" type="image/png">
     <link rel="stylesheet" href="styles/general-styles.css">
-    <link rel="stylesheet" href="styles/index-styles.css">
+    <link rel="stylesheet" href="styles/about-styles.css">
     <script src="scripts/sidemenu-script.js"></script>
 </head>
 
 <body>
-
     <header>
         <div class="logo">
             <a href="index.html">
@@ -22,7 +20,6 @@
         <div class="title">
             <h1><a href="index.html" class="title-link">Footwear Smart Assistant</a></h1>
         </div>
-        <button class="login-btn" onclick="window.location.href='login.html'">Login</button>
         <button class="open-menu-btn">&#9776;</button>
     </header>
 
@@ -33,25 +30,33 @@
             <li><a href="#">Suggestions & Sharing</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
         </ul>
         <button class="close-menu-btn">&times;</button>
     </nav>
 
     <main>
-        <section class="homepage-photo-section">
-            <h2>Discover Our Collection</h2>
-            <div class="homepage-photo">
-                <img src="resources/homepage-photo.jpg" alt="Homepage Photo">
+        <!-- to do -->
+        <section class="contact-section">
+            <div class="info-container">
+                <h2>Contact Us</h2>
+                <p>Have a question, comment or suggestion? We'd love to hear from you! 
+                    Reach out to us via phone or email.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>contact@shoerecommendations.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p>+40723222222</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>str. General Henri Mathias Berthelot 16, Iași 700483</p>
+                    </div>
+                </div>
             </div>
-        </section>
-
-        <section class="newsletter-section">
-            <h2>Subscribe to our Newsletter</h2>
-            <p>Get the latest footwear trends and tips straight to your inbox!</p>
-            <form action="subscribe.php" method="POST">
-                <input type="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit" class="subscribe-btn">Subscribe</button>
-            </form>
         </section>
     </main>
 
@@ -67,7 +72,6 @@
         </div>
         <p>&copy; 2024 Shoe Recommendation Platform. All rights reserved.</p>
     </footer>
-
 </body>
 
 </html>

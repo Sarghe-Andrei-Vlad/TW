@@ -28,15 +28,14 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="filter.html">Products & Outfits</a></li>
             <li><a href="#">Suggestions & Sharing</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="index.html">Logout</a></li>
         </ul>
         <button class="close-menu-btn">&times;</button>
     </nav>
 
     <main>
-        <!-- working on it -->
         <div class="recommendation-header">
             <h2>Here is our recommendation</h2>
         </div>
@@ -46,9 +45,28 @@
             </div>
             <div class="shoe-description">
                 <h2>Shoe Description</h2>
-                <p>For dancing ceremonies we abvise you to wear shoes with stainless steel heels.</p>
+                <p>For dancing ceremonies we abvise you to wear shoes with stainless steel heels.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe perferendis et quam dignissimos voluptatibus? Consectetur, expedita officia! Optio, doloribus quos tempore rem aperiam dolor. Non voluptates quis eveniet recusandae culpa.</p>
                 <!-- to do: add more text to shoe description -->
             </div>
+        </section>
+
+        <section class="user-review-section">
+            <h2>Leave a review</h2>
+            <form action="#" method="post">
+                <label for="review">Your review:</label><br>
+                <textarea id="review" name="review" rows="1" cols="50" required></textarea><br>
+                <label for="name">Your name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="rating">Rating:</label>
+                <select for="rating" name="rating">
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select><br>
+                <input type="submit" value="Submit review">
+            </form>
         </section>
     </main>
 
