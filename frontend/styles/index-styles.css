@@ -28,8 +28,14 @@
 
 .homepage-photo img {
   max-width: 100%;
+  border: #333 solid 1px;
 }
 
+@media screen and (max-width: 1000px) {
+  .homepage-photo img {
+    max-width: 80%;
+  }
+}
 .newsletter-section {
   text-align: center;
   margin-top: 50px;
