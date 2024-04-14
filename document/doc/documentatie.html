@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Documentation</title>
+  <link rel="stylesheet" href="documentatie.css" />
+  <link rel="icon" type="image/x-icon" href="../images/Logo.png" />
+  <meta charset="UTF-8" />
+  <meta name="author" content="Sarghe Andrei Vlad & Vartolas Timeea" />
+  <meta name="description" content="Documentation of the Footwear Smart Assistant on the web application." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body style="background-image: none">
+  <article>
+    <header>
+      <div class="banner">
+        <img src="../images/scholarly-html.png" width="227" height="50" alt="Scholarly HTML logo" />
+      </div>
+      <h1>Footwear Smart Assistant</h1>
+    </header>
+
+    <div role="contentinfo">
+      <section typeof="sa:AuthorsList">
+        <h2>Authors</h2>
+
+        <ul>
+          <li typeof="sa:ContributorRole" property="schema:author">
+            <span typeof="schema:Person">
+              <meta property="schema:givenName" content="Andrei-Vlad" />
+              <meta property="schema:familyName" content="Sarghe" />
+              <span property="schema:name">Sarghe Andrei Vlad</span>
+            </span>
+
+            <ul>
+              <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                <a href="sargheandreivlad@gmail.com" property="schema:email">sargheandreivlad.com</a>
+              </li>
+            </ul>
+          </li>
+
+          <li typeof="sa:ContributorRole" property="schema:author">
+            <span typeof="schema:Person">
+              <meta property="schema:givenName" content="Timeea-Stefana" />
+              <meta property="schema:familyName" content="Vartolas" />
+              <span property="schema:name">Vartolas Timeea-Stefana</span>
+            </span>
+
+            <ul>
+              <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                <a href="timeea_vartolas@yahoo.com" property="schema:email">timeea_vartolas@yahoo.com</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <section>
+      <h3>1. Introduction</h3>
+
+      <section>
+        <h4>1.1 Purpose</h4>
+
+        <p>
+          The purpose of this document is to present a description of the web
+          application Footwear Smart Assistant based on the project FoSA.
+        </p>
+        <p>
+          It will explain the purpose and features of the application, the
+          interface of the software, what it will do and the constraints under
+          which it must operate.
+        </p>
+        <p>
+          This document is intended for any potential users of the software.
+        </p>
+      </section>
+
+      <section>
+        <h4>1.2 Intended Audience and Reading Suggestions</h4>
+
+        <p>
+          This document is intended for any user that might wish to use the
+          Footwear Smart Assistant web application.
+        </p>
+      </section>
+
+      <section>
+        <h4>1.3 Product Scope</h4>
+
+        <p>
+          Footwear Smart Assistant has been developed with the intended purpose of
+          being an interactive webpage for the general internet users.
+        </p>
+      </section>
+    </section>
+
+    <section>
+      <h3>2. Overall Description</h3>
+
+      <section>
+        <h3>2.1 Product Description</h3>
+
+        <p>
+          The Footwear Smart Assistant website is based on the FoSA project.
+        </p>
+        <p>
+          It is an online website meant for people who
+          wish to look for specific or non-specific shoes/outfits in an interactive way.
+        </p>
+        <p>
+          Users can choose to see our recommended outfits/shoes or choose their own
+          shoes/outfits based on a list of filters provided by the website.
+        </p>
+      </section>
+
+      <section>
+        <h4>2.2 Product Functions</h4>
+
+        <p>
+          The pages within the website are designed as follows:
+        </p>
+
+        <p>
+          Home Page (index) - central point of navigation to the rest of the pages
+          within the website
+        </p>
+
+        <ul>
+          <li>logo: our logo, redirects to the homepage</li>
+          <li>title: redirects to the homepage</li>
+          <li>login button: redirects to the login page</li>
+          <li>
+            sidemenu: pulls out a menu containing the home, products,
+            about and contact pages.
+          </li>
+          <li>home: redirects to the home page</li>
+          <li>products & outfits: redirects to the filters page</li>
+          <li>about: redirects to the about page</li>
+          <li>contact: redirects to the contact page</li>
+          <li>
+            subscribe email input: adds you to our list of subscribers
+            for our newsletter if your email is valid
+          </li>
+        </ul>
+
+        <p>Login Page</p>
+
+        <ul>
+          <li>logo: our logo, redirects to the homepage</li>
+          <li>title: redirects to the homepage</li>
+          <li>
+            sidemenu: pulls out a menu containing the home, products,
+            about and contact pages.
+          </li>
+          <li>email input: accepts the email of the user</li>
+          <li>password input: accepts the password of the user</li>
+          <li>
+            login: finalizes the login action, logging the user in if the
+            credentials are correct, and then redirects them to the home page
+          </li>
+          <li>register: redirects to the register page</li>
+        </ul>
+
+        <p>Register Page</p>
+        <ul>
+          <li>logo: our logo, redirects to the homepage</li>
+          <li>title: redirects to the homepage</li>
+          <li>
+            sidemenu: pulls out a menu containing the home, products,
+            about and contact pages.
+          </li>
+          <li>username input: accepts the username of the user</li>
+          <li>email input: accepts the email of the user</li>
+          <li>password input: accepts the password of the user</li>
+          <li>confirm password input: checks that the two passwords match.</li>
+          <li>
+            create aaccount button: finalizes the register action, registering the
+            user in if the credentials are correct, and then redirects them to
+            the home page
+          </li>
+          <li>
+            Sign in button: redirects to the login page
+          </li>
+        </ul>
+
+        <section>
+          <h4>2.3 Operating Environment</h4>
+
+          <p>
+            The developed product can be used on any device with a connection to
+            the Internet and a browser installed.
+          </p>
+        </section>
+
+        <section>
+          <h4>2.4 Design and Implementation Constraints</h4>
+
+          <p>
+            To be completed...
+          </p>
+        </section>
+      </section>
+
+      <section>
+        <h3>3. External Interface Requirements</h3>
+
+        <section>
+          <h4>3.1 User Interfaces</h4>
+
+          <div>
+            <figure typeof="sa:image">
+              <figcaption>Home Page</figcaption>
+              <img src="../screenshots/home_page.png" alt="Home Page Screenshot" width="1000" />
+            </figure>
+
+            <figure typeof="sa:image">
+              <figcaption>Login Page</figcaption>
+              <img src="../screenshots/login_page.png" alt="Login Page Screenshot" width="1000" />
+            </figure>
+
+            <figure typeof="sa:image">
+              <figcaption>Register Page</figcaption>
+              <img src="../screenshots/register_page.png" alt="Register Page Screenshot" width="1000" />
+            </figure>
+
+            <figure typeof="sa:image">
+              <figcaption>Buttons</figcaption>
+              <img src="../screenshots/buttons.png" alt="Admin Page Screenshot" width="1000" />
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <h4>3.2 Software Interfaces</h4>
+
+          <p>
+            The minimum software requirements of Footwear Smart Assistant are a working
+            browser and a connection to the Internet.
+          </p>
+        </section>
+
+        <section>
+          <h4>3.4 Communications Interfaces</h4>
+
+          <p>
+            Footwear Smart Assistant requires an Internet connection. The communication
+            standard to be used is HTTP.
+          </p>
+        </section>
+      </section>
+
+      <section>
+        <h3>4. System Features</h3>
+        <section>
+          <h4>4.1 Home Page</h4>
+
+          <p>
+            Users can login into their acoount, navigate to all other pages 
+            and subscribe to our newsletter.
+          </p>
+        </section>
+
+        <section>
+          <h4>4.2 Login Page</h4>
+
+          <p>
+            Users of our website can login by entering their credentials or register if
+            they do not have an account and navigate to other pages from this page.
+          </p>
+        </section>
+
+        <section>
+          <h4>4.3 Register Page</h4>
+
+          <p>
+            Guests can create an account and then use it to log into the
+            application and access all the features it provides and navigate to
+            other pages from this page.
+          </p>
+        </section>
+      </section>
+
+      <section>
+        <h3>5. Use of Technologies: Motivation</h3>
+        <p>
+          To be completed...
+        </p>
+      </section>
+
+      <section>
+        <h4>6. References</h4>
+        <p>
+          To be completed...
+        </p>
+      </section>
+  </article>
+</body>
+
+</html>
