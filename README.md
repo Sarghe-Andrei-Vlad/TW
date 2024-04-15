@@ -71,7 +71,9 @@ This document is intended for any user that might wish to use the Footwear Smart
 Footwear Smart Assistant has been developed with the intended purpose of being an interactive webpage for the general internet users.
 ### 1.4 References
 [IEEE Template for System Requirements Specification Documents](https://github.com/rick4470/IEEE-SRS-Tempate/blob/master/README.md#12-document-conventions)
+
 [Figma: The Collaborative Interface Design Tool](https://www.figma.com/)
+
 [FoSA (Footwear Smart Assistant)](https://github.com/Sarghe-Andrei-Vlad/TW)
 
 ## Overall Description
