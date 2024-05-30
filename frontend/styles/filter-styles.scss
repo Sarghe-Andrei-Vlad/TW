@@ -50,10 +50,6 @@
     padding: 20px 0;
 }
 
-// .title {
-//     // margin-bottom: 2rem;
-// }
-
 .photo-gallery {
     display: flex;
     gap: 20px;
@@ -84,4 +80,25 @@
     .photo-gallery {
         flex-direction: column;
     }
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination-controls button:focus {
+    outline: none;
+    background-color: #45a049;
 }

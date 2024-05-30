@@ -102,7 +102,7 @@ module.exports.login = function (user_name, password) {
             console.log("Connected!");
         });
         console.log("username:" + user_name);
-        con.query('select password from users where username=? and status=1', [user_name], function (err, rows, fields) {
+        con.query('select password from users where username=? and status=0', [user_name], function (err, rows, fields) {
             if (err) return reject(false);
             con.end();
             if (rows[0] == null || !rows[0]) resolve(false);
