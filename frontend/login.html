@@ -38,9 +38,9 @@
     <main class="login-container">
         <div class="login-box">
             <h2>CONNECT TO YOUR ACCOUNT</h2>
-            <form action="login.php" method="POST">
+            <form method="POST" id="login-form">
                 <div class="form-group">
-                    <input type="email" id="email" name="email" class="input-field" placeholder="Email" required>
+                    <input type="text" id="username" name="username" class="input-field" placeholder="Username" required>
                 </div>
                 <div class="form-group">
                     <input type="password" id="password" name="password" class="input-field" placeholder="Password"
@@ -55,6 +55,7 @@
         </div>
     </main>
 
+    <script src="scripts/login-script.js"></script>
 
     <footer>
         <div class="footer-content">

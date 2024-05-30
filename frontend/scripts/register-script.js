@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let registerForm = document.getElementById('register-form');
     registerForm.addEventListener('submit', function (event) {
        
+        event.preventDefault();
+
         let formData = new FormData(registerForm);
         let username = formData.get('username');
         let email = formData.get('email');
