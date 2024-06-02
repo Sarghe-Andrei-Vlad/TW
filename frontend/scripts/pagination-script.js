@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const shoes = Array(60).fill().map((_, i) => `resources/generic-shoe.jpg`); // Array of 60 shoe images
+    const shoes = Array(60).fill().map((_, i) => `resources/generic-shoe.jpg`); // array of 60 shoe images
     const shoesPerPage = 6;
     const totalPages = Math.ceil(shoes.length / shoesPerPage);
     const shoeGallery = document.getElementById('shoe-gallery');

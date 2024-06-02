@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             password: password
         };
 
-        let url = address + ':8001/register';
+        let url = address + ':8002/register';
         fetch(url, {
             method: 'POST',
             body: JSON.stringify(requestData),

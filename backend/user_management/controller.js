@@ -41,9 +41,9 @@ function createToken(user_id) {
     };
     var privateKEY = fs.readFileSync('./private.key', 'utf8');
     var publicKEY = fs.readFileSync('./public.key', 'utf8');
-    var i = 'UPNP';                   // Issuer 
-    var s = 'some@user.com';          // Subject 
-    var a = 'http://localhost';       // Audience
+    var i = 'UPNP';                   // issuer 
+    var s = 'some@user.com';          // subject 
+    var a = 'http://localhost';       // audience
     var signOptions = {
         issuer: i,
         subject: s,
@@ -143,5 +143,5 @@ function onRequest(request, response) {
     }
 }
 
-http.createServer(onRequest).listen(8001);
+http.createServer(onRequest).listen(8002);
 console.log("Service is running ");
