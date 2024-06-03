@@ -7,7 +7,7 @@ hashPassword = function (password) {
 
 function checkUsername(name) {
     return new Promise(function (resolve, reject) {
-        var mysql = require('mysql');
+        var mysql = require('mysql2');
 
         var con = mysql.createConnection({ host: 'localhost', user: 'root', password: 'root', database: 'fosa_database' });
         con.connect(function (err) {
@@ -28,7 +28,7 @@ function checkUsername(name) {
 
 function checkEmail(email) {
     return new Promise(function (resolve, reject) {
-        var mysql = require('mysql');
+        var mysql = require('mysql2');
 
         var con = mysql.createConnection({ host: 'localhost', user: 'root', password: 'root', database: 'fosa_database' });
         con.connect(function (err) {
@@ -49,7 +49,7 @@ function checkEmail(email) {
 
 function addUser(name, email, password) {
     return new Promise(function (resolve, reject) {
-        var mysql = require('mysql');
+        var mysql = require('mysql2');
 
         var con = mysql.createConnection({ host: 'localhost', user: 'root', password: 'root', database: 'fosa_database' });
         con.connect(function (err) {
@@ -71,7 +71,7 @@ function addUser(name, email, password) {
 
 module.exports.checkStatus = function (username) {
     return new Promise(function (resolve, reject) {
-        var mysql = require('mysql');
+        var mysql = require('mysql2');
 
         var con = mysql.createConnection({ host: 'localhost', user: 'root', password: 'root', database: 'fosa_database' });
 
@@ -93,7 +93,7 @@ module.exports.checkStatus = function (username) {
 
 module.exports.login = function (user_name, password) {
     return new Promise(function (resolve, reject) {
-        var mysql = require('mysql');
+        var mysql = require('mysql2');
 
         var con = mysql.createConnection({ host: 'localhost', user: 'root', password: 'root', database: 'fosa_database' });
 
@@ -121,7 +121,7 @@ module.exports.login = function (user_name, password) {
 
 module.exports.getId = function (username) {
     return new Promise(function (resolve, reject) {
-        var mysql = require('mysql');
+        var mysql = require('mysql2');
         console.log("get id:" + username);
         var con = mysql.createConnection({ host: 'localhost', user: 'root', password: 'root', database: 'fosa_database' });
 
@@ -143,7 +143,7 @@ module.exports.getId = function (username) {
 
 module.exports.getUsername = function (userID) {
     return new Promise(function (resolve, reject) {
-        var mysql = require('mysql');
+        var mysql = require('mysql2');
         console.log("get USERNAME for:" + userID);
         var con = mysql.createConnection({ host: 'localhost', user: 'root', password: 'root', database: 'fosa_database' });
 

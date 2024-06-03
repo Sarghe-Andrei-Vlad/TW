@@ -1,1 +1,3 @@
 node_modules/
+backend/database/node_modules/
+backend/user_management/node_modules/

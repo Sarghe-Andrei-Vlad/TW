@@ -1,41 +1,34 @@
-const mysql = require('mysql');
+const http = require('http');
+const url = require('url');
+const controller = require('../user_management/controller.js');
 
-const pool = mysql.createPool({
-    connectionLimit: 10,
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'fosa_database'
-});
+const noType = { "Access-Control-Allow-Methods": "GET,POST,DELETE,OPTIONS", "Access-Control-Allow-Credentials": true, "Access-Control-Allow-Headers": "authorization,content-type", "Access-Control-Allow-Origin": "*" };
 
-pool.on('error', (err) => {
-    console.error('Database error:', err);
-    if (err.code === 'PROTOCOL_CONNECTION_LOST') {
-        pool.end();
-        pool = mysql.createPool({
-            connectionLimit: 10,
-            host: 'localhost',
-            user: 'root',
-            password: 'root',
-            database: 'fosa_database'
-        });
+function onRequest(request, response) {
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Methods', 'GET,POST,DELETE,OPTIONS');
+    response.setHeader('Access-Control-Allow-Credentials', true);
+    response.setHeader('Access-Control-Allow-Headers', 'authorization,content-type');
+
+    const reqUrl = url.parse(request.url, true);
+
+    if (request.method === 'POST' && reqUrl.pathname === '/login') {
+        controller.handleLogin(request, response);
+    } else if (request.method === 'POST' && reqUrl.pathname === '/register') {
+        controller.handleRegister(request, response);
+    } else if (request.method === 'GET' && reqUrl.pathname.startsWith('/getId')) {
+        controller.handleGetId(request, response);
+    } else if (request.method === 'GET' && reqUrl.pathname.startsWith('/getUsername')) {
+        controller.handleGetUsername(request, response);
+    } else if (request.method === 'GET' && reqUrl.pathname.startsWith('/images')) {
+        controller.handleFetchImages(request, response);
+    } else if (request.method === 'OPTIONS') {
+        response.writeHead(200, noType);
+        response.end();
     } else {
-        throw err;
+        controller.send404Response(response);
     }
-});
+}
 
-pool.query('SELECT * FROM Users', (error, results, fields) => {
-    if (error) {
-        console.error('Error executing query:', error);
-        return;
-    }
-    console.log('Query results:', results);
-
-    pool.end((err) => {
-        if (err) {
-            console.error('Error closing database connections:', err);
-        } else {
-            console.log('Database connections closed successfully.');
-        }
-    });
-});
+http.createServer(onRequest).listen(8001);
+console.log("Service is running at http://127.0.0.1:8001");
