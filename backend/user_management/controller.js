@@ -106,6 +106,41 @@ async function handleLogin(request, response) {
     });
 }
 
+async function handleLogout(request, response) {
+    let body = '';
+    request.on('data', chunk => { 
+        console.log('Receiving chunk:', chunk); // Log each chunk received
+        body += chunk; 
+    });
+    
+    request.on('end', () => {
+        try {
+            console.log('Complete body received:', body); // Log the complete body received
+            if (body) {
+                body = JSON.parse(body);
+                const token = body.token;
+                if (!token) {
+                    response.writeHead(400, { 'Content-Type': 'application/json' });
+                    response.write(JSON.stringify({ error: 'Token is required for logout' }));
+                    response.end();
+                    return;
+                }
+                response.writeHead(200, { 'Content-Type': 'application/json' });
+                response.write(JSON.stringify({ message: 'Logout successful' }));
+                response.end();
+            } else {
+                throw new Error('No body data received');
+            }
+        } catch (err) {
+            console.error('Error during logout:', err);
+            response.writeHead(500, { 'Content-Type': 'application/json' });
+            response.write(JSON.stringify({ error: 'Internal Server Error' }));
+            response.end();
+        }
+    });
+}
+
+
 async function handleRegister(request, response) {
     let body = '';
     request.on('data', chunk => { body += chunk; });
@@ -188,9 +223,13 @@ async function handleFetchImages(request, response) {
 
 module.exports = {
     handleLogin,
+    handleLogout,
     handleRegister,
     handleGetId,
     handleGetUsername,
     handleFetchImages,
-    send404Response
+    send404Response,
+    send403Response,
+    send401Response,
+    send500Response
 };
