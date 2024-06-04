@@ -69,6 +69,24 @@ function addUser(name, email, password) {
     })
 }
 
+function addReview(FootwearID, recommendation_description, review, rating) {
+    return new Promise(function (resolve, reject) {
+        var mysql = require('mysql2');
+
+        var con = mysql.createConnection({ host: 'localhost', user: 'root', password: 'root', database: 'fosa_database' });
+        con.connect(function (err) {
+            if (err) return reject(err);
+            console.log("Connected!");
+        });
+
+        con.query('insert into reviews(FootwearID,recommendation_description,review,rating) values (?,?,?,?)', [FootwearID, recommendation_description, review, rating], function (err, rows, fields) {
+            if (err) return reject(err);
+            con.end();
+            resolve(true);
+        })
+    })
+}
+
 module.exports.checkStatus = function (username) {
     return new Promise(function (resolve, reject) {
         var mysql = require('mysql2');
@@ -185,3 +203,15 @@ module.exports.register = function (name, pass, email) {
         });
     })
 }
+
+module.exports.review = function (FootwearID, recommendation_description, review, rating) {
+    return new Promise(function (resolve, reject) {
+        console.log("review for" + FootwearID);
+        addReview(FootwearID, recommendation_description, review, rating).then(function (bool) {
+            if (bool) {
+                resolve('review registered succesfully');
+            }
+        }).catch((err) => setImmediate(() => { console.log(err); reject(err); }));
+    })
+}
+

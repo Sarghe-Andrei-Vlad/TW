@@ -10,6 +10,7 @@
     <script src="scripts/sidemenu-script.js"></script>
     <script src="scripts/logout-script.js"></script>
     <script src="scripts/individual-shoe.js"></script>
+    <script src="scripts/review-script.js"></script>
 </head>
 
 <body>
@@ -53,11 +54,9 @@
 
         <section class="user-review-section">
             <h2>Leave a review</h2>
-            <form action="#" method="post">
+            <form method="POST" id="review-form">
                 <label for="review">Your review:</label><br>
                 <textarea id="review" name="review" rows="1" cols="50" required></textarea><br>
-                <label for="name">Your name:</label><br>
-                <input type="text" id="name" name="name" required><br>
                 <label for="rating">Rating:</label>
                 <select id="rating" name="rating">
                     <option value="5">5 Stars</option>
