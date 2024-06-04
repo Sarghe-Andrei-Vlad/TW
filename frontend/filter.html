@@ -179,7 +179,8 @@
 
             currentShoes.forEach((image, index) => {
                 if (index % 2 === 0) columnContent += '<div class="column">';
-                columnContent += `<div class="photo"><a href="shoe-page.html?image_url=${encodeURIComponent(image.image_url)}&description=${encodeURIComponent(`These ${image.type || `kicks`} are the perfect ${image.sex || ``} ${image.age || ``} shoes. \n With their ${image.color || `color`} nouances and a nice ${image.personal_style || `style and`} ${image.pattern || ``} pattern, \n they can be worn any ${image.weather || ``} day of ${image.season || `this season`}. \n Please leave our recommandation a review below. \n Thank you!!!`)}"><img src="${image.image_url}" alt=""></a></div>`;
+                    columnContent += `<div class="photo">
+            <a href="shoe-page.html?image_url=${encodeURIComponent(image.image_url)}&description=${encodeURIComponent(`These ${image.type || `kicks`} are the perfect ${image.sex || ``} ${image.age || ``} shoes. \n With their ${image.color || `color`} nouances and a nice ${image.personal_style || `style and`} ${image.pattern || ``} pattern, \n they can be worn any ${image.weather || ``} day of ${image.season || `this season`}. \n Please leave our recommandation a review below. \n Thank you!!!`)}&footwearID=${encodeURIComponent(image.FootwearID)}"><img src="${image.image_url}" alt=""></a></div>`;
                 if (index % 2 === 1 || index === currentShoes.length - 1) columnContent += '</div>';
             });
 
