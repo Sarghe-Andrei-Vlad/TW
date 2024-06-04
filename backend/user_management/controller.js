@@ -13,7 +13,7 @@ const pool = mysql.createPool({
     database: 'fosa_database'
 });
 
-const itemsPerPage = 18;
+const itemsPerPage = 40;
 
 pool.on('error', (err) => {
     console.error('Database error:', err);
@@ -109,13 +109,13 @@ async function handleLogin(request, response) {
 async function handleLogout(request, response) {
     let body = '';
     request.on('data', chunk => { 
-        console.log('Receiving chunk:', chunk); // Log each chunk received
+        console.log('Receiving chunk:', chunk);
         body += chunk; 
     });
     
     request.on('end', () => {
         try {
-            console.log('Complete body received:', body); // Log the complete body received
+            console.log('Complete body received:', body);
             if (body) {
                 body = JSON.parse(body);
                 const token = body.token;

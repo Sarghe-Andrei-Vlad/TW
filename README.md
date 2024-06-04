@@ -148,15 +148,55 @@ About Page - provides information about a the shoe recommendation platform, incl
 
 Contact Page - provides the contact information of the platform (email, phone number and address)
 ### 2.3 User Classes and Characteristics
-To be completed...
+To be reviewed...
+
+Casual Users: Infrequent users who primarily browse or search for products with basic technical skills and no special privileges.
+Registered Users: Moderate to frequent users who utilize advanced features like saving favorites and writing reviews, with standard user privileges.
+Power Users: Very frequent users who extensively use all features and possibly contribute high-quality content, with high technical expertise.
+Administrators: Daily users responsible for site management and maintenance, possessing the highest privilege levels and technical expertise.
 ### 2.4 Operating Environment
 The developed product can be used on any device with a connection to the Internet and a browser installed.
 ### 2.5 Design and Implementation Constraints
-To be completed...
+To be reviewed...
+
+The development of the Footwear Smart Assistant (FoSA) website is subject to the following constraints:
+
+- Corporate/Regulatory Policies: Compliance with GDPR for data protection and PCI DSS for secure payment processing.
+- Hardware Limitations: Ensuring responsive performance across various devices with differing hardware capabilities, including timing and memory requirements.
+- Interfaces to Other Applications: Integration with external APIs for social media logins and third-party review systems.
+- Specific Technologies and Tools: Use of Node.js for server-side development, MySQL2 for database management, and HTML, CSS (Sass) for front-end development.
+- Parallel Operations: Supporting concurrent user interactions without performance degradation.
+- Language Requirements: English as the primary language with potential support for multiple languages for international users.
+- Communications Protocols: Use of HTTPS for secure data transmission.
+- Security Considerations: Implementation of robust authentication mechanisms using public and private keys, and encryption for data protection.
+- Design Conventions: Adherence to industry-standard coding practices and design conventions to ensure maintainability and scalability of the codebase.
 ### 2.6 User Documentation
-To be completed...
+To be reviewed...
+
+The Footwear Smart Assistant (FoSA) website will include the following user documentation components:
+
+- User Manuals: Comprehensive guides detailing the features and functionalities of the website.
+- Online Help: Context-sensitive help available within the website to assist users with immediate questions and issues.
+- Tutorials: Step-by-step guides and video tutorials to help users understand how to use key features effectively.
+
+These documentation components will be delivered in digital formats such as PDF and accessible web pages, adhering to standard documentation practices to ensure ease of use and accessibility.
 ### 2.7 Assumptions and Dependencies
-To be completed...
+To be reviewed...
+
+The development of the Footwear Smart Assistant (FoSA) website is based on the following assumptions and dependencies:
+
+- Assumptions:
+
+Users will have reliable internet access and use modern web browsers.
+External APIs for social media logins and third-party reviews will remain available and stable.
+The development team will have access to necessary development and testing tools.
+
+- Dependencies:
+
+Dependence on MySQL for database management and its availability.
+Use of third-party authentication services for user login and registration.
+Reliance on external libraries and frameworks such as Node.js and Sass for development.
+These factors could impact the project if assumptions prove incorrect or dependencies change.
 ## External Interface Requirements
 ### 3.1 User Interfaces
 ![Home Page](document/screenshots/home_page.png)
@@ -169,7 +209,42 @@ To be completed...
 ![Contact Page](document/screenshots/contact_page.png)
 
 ### 3.2 Hardware Interfaces
-To be completed...
+To be reviewed...
+
+The Footwear Smart Assistant (FoSA) website interacts with various hardware components to deliver a seamless user experience.
+
+Supported Device Types
+
+The FoSA website supports a wide range of device types to ensure accessibility and usability across different platforms. The supported devices include:
+
+1. Desktop Computers: Includes devices running on Windows, macOS, and Linux operating systems.
+2. Laptops: Includes devices running on Windows, macOS, and Linux operating systems.
+3. Tablets: Includes devices running on iOS, Android, and Windows operating systems.
+
+Logical Characteristics
+
+1. Responsive Design: The website uses responsive web design techniques to adapt to different screen sizes and resolutions, ensuring a consistent user experience across all device types.
+2. Web Browsers: The website supports major web browsers, including Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, and Opera. Compatibility is ensured through thorough testing and adherence to web standards.
+3. User Interaction: Input methods include mouse and keyboard for desktops and laptops, and touch input for tablets and smartphones. The website's interface adjusts accordingly to provide optimal usability.
+
+Physical Characteristics
+
+1. Server-Side Components:
+Web Server: The website is hosted on a web server that handles HTTP/HTTPS requests and serves web pages to users. It uses Node.js to manage server-side logic and interactions with the database.
+Database Server: A MySQL database server stores all the footwear, user, reviews, and statistics data. The database server communicates with the Node.js application through the MySQL2 library.
+
+2. Client-Side Components:
+User Devices: The website is accessed via web browsers on user devices. The client-side code, written in HTML, CSS (and Sass), and JavaScript, runs on these devices to render the web pages and handle user interactions.
+
+3. Data and Control Interactions:
+Data Requests: Users' actions, such as searching for footwear or applying filters, generate data requests sent from the client-side to the server-side. These requests are processed by Node.js, which interacts with the MySQL database to fetch or update data.
+Data Responses: The server responds with the requested data or confirmation of data updates, which the client-side code then uses to update the user interface dynamically.
+Security Protocols: Communication between user devices and the web server is secured using HTTPS, ensuring data integrity and confidentiality. The use of public and private keys for user authentication further enhances security.
+
+Communication Protocols
+
+1. HTTP/HTTPS: The primary communication protocol for interactions between user devices and the web server. HTTPS is used to encrypt data transmitted over the network.
+2. Database Connectivity: The Node.js application communicates with the MySQL database using the MySQL2 library, which provides a reliable and efficient interface for database operations.
 ### 3.3 Software Interfaces
 The minimum software requirements of Footwear Smart Assistant are a working browser and a connection to the Internet.
 ### 3.4 Communications Interfaces
@@ -191,20 +266,84 @@ Users can get information about a the shoe recommendation platform, including it
 Users can get the contact information of the platform (email, phone number and address) and navigate to other pages from this page.
 ## Other Nonfunctional Requirements
 ### 5.1 Performance Requirements
-To be completed...
+To be reviewed...
+
+The Footwear Smart Assistant (FoSA) website is designed to meet the following performance requirements:
+
+Response Time: The website loads the homepage within 3 seconds under normal network conditions, ensuring a smooth user experience.
+Search Functionality: Searches for shoes or outfits using filters return results within 2 seconds, allowing users to quickly find what they are looking for.
+Concurrent Users: The system supports up to 500 concurrent users without performance degradation, maintaining consistent functionality during high traffic.
+Data Processing: User inputs and interactions (e.g., applying filters, adding items to favorites) are processed and updated on the front-end within 1 second, providing immediate feedback to users.
+Scalability: The system scales to accommodate increased user load, maintaining the performance standards specified above.
+These requirements ensure that the website delivers a responsive and efficient user experience, even under varying conditions.
 ### 5.2 Safety Requirements
-To be completed...
+To be reviewed...
+
+The FoSA website addresses the following safety requirements:
+
+Data Protection: User data, including personal information and preferences, is protected against loss or unauthorized access through robust security measures.
+Transaction Safety: User registration and login processes are safeguarded with encryption to prevent interception and unauthorized access.
+Regulatory Compliance: The website complies with relevant regulations such as GDPR for data protection and privacy, ensuring that user data is handled responsibly.
+Error Handling: The system handles errors gracefully, providing user-friendly error messages and logging errors for administrative review, minimizing user disruption and aiding in troubleshooting.
+These safety measures help create a secure and trustworthy environment for users interacting with the website.
 ### 5.3 Security Requirements
-To be completed...
+To be reviewed...
+
+The FoSA website incorporates the following security requirements:
+
+Authentication: Users authenticate using a combination of a public key and a private key during login and registration, ensuring secure access.
+Data Encryption: All sensitive data, including user credentials and personal information, is encrypted both in transit and at rest, protecting against data breaches.
+Access Control: Different user roles (e.g., admin, registered user) have appropriate access controls, ensuring they can only perform actions authorized for their role.
+Regular Audits: Security audits are conducted regularly to identify and fix vulnerabilities, maintaining a high level of security.
+Compliance: The website meets security standards outlined in regulations such as GDPR and PCI DSS for handling user data, ensuring comprehensive data protection.
+These security measures help protect user information and maintain the integrity of the system.
 ### 5.4 Software Quality Attributes
-To be completed...
+To be reviewed...
+
+The FoSA website maintains the following software quality attributes:
+
+Usability: The interface is intuitive and easy to navigate, providing a user-friendly design that enhances the user experience.
+Reliability: The system achieves an uptime of at least 99.9%, ensuring it is available to users almost all the time, enhancing reliability.
+Maintainability: The codebase is modular and well-documented, facilitating easy maintenance and updates.
+Scalability: The system handles increased load without significant performance degradation, ensuring consistent functionality.
+Interoperability: The system integrates smoothly with other services and APIs, such as social media login options and third-party review systems, enhancing flexibility.
+These quality attributes ensure that the website is functional, user-friendly, and easy to manage for developers.
 ### 5.5 Business Rules
-To be completed...
+To be reviewed...
+
+The FoSA website operates under the following business rules:
+
+User Roles: Only registered users can add reviews, while all users can view reviews and use the search and filter functionalities, defining user capabilities.
+Content Management: Admins update the database with new footwear and outfit options, maintaining the freshness of the inventory.
+Review Moderation: Admins moderate user reviews to remove inappropriate content, ensuring a positive user community.
+Usage Policies: Users agree to the terms of service and privacy policy before registering, ensuring legal and ethical compliance.
+These business rules define the operational framework within which the website functions, ensuring clarity and consistency in user interactions.
 ## Other Requirements
-To be completed...
+To be reviewed...
+
+Other pertinent requirements for the FoSA website include:
+
+Database Requirements: The database is a MySQL database, using the MySQL2 library for Node.js, and is optimized for fast read and write operations, ensuring efficient data handling.
+Internationalization: The website supports multiple languages, catering to a global user base and enhancing accessibility.
+Legal Requirements: The website complies with international laws regarding e-commerce and online user interactions, including accessibility standards, ensuring legal compliance.
+Reuse Objectives: The project develops reusable components that can be easily integrated into other projects or future versions of the website, promoting efficient development practices.
 ### Appendix A: Glossary
-To be completed...
-### Appendix B: Analysis Models
-To be completed...
+To be reviewed...
+
+FoSA: Footwear Smart Assistant
+GDPR: General Data Protection Regulation
+HTML: HyperText Markup Language
+CSS: Cascading Style Sheets
+Sass: Syntactically Awesome Style Sheets
+Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine
+MySQL: An open-source relational database management system
+<!-- ### Appendix B: Analysis Models
+To be reviewed...
+
+Optionally, include any pertinent analysis models, such as data flow diagrams, class diagrams, state-transition diagrams, or entity-relationship diagrams.
 ### Appendix C: To Be Determined List
-To be completed...
+To be reviewed...
+
+TBD-001: Finalize the list of supported languages for internationalization.
+TBD-002: Determine the detailed design for user authentication flow.
+TBD-003: Establish the frequency and scope of security audits. -->
