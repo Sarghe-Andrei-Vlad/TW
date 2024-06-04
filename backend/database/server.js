@@ -16,6 +16,8 @@ function onRequest(request, response) {
         controller.handleLogin(request, response);
     } else if (request.method === 'POST' && reqUrl.pathname === '/register') {
         controller.handleRegister(request, response);
+    } else if (request.method === 'POST' && reqUrl.pathname === '/review') {
+        controller.handleReview(request, response);
     } else if (request.method === 'POST' && reqUrl.pathname === '/logout') {
         controller.handleLogout(request, response);
     } else if (request.method === 'GET' && reqUrl.pathname.startsWith('/getId')) {

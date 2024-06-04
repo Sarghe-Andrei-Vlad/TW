@@ -160,6 +160,25 @@ async function handleRegister(request, response) {
     });
 }
 
+async function handleReview(request, response) {
+    let body = '';
+    request.on('data', chunk => { body += chunk; });
+    request.on('end', async () => {
+        body = JSON.parse(body);
+        console.log('Received review request:', body);
+        try {
+            const message = await model.review(body['FootwearID'],body['recommendation_description'], body['review'],body[`rating`]);
+            let json = { "status": message };
+            response.writeHead(200, jsonType);
+            response.write(JSON.stringify(json));
+            response.end();
+        } catch (err) {
+            send500Response(response);
+            console.log(err);
+        }
+    });
+}
+
 async function handleGetId(request, response) {
     const queryData = url.parse(request.url, true).query;
     let username = queryData.username;
@@ -226,6 +245,7 @@ module.exports = {
     handleGetId,
     handleGetUsername,
     handleFetchImages,
+    handleReview,
     send404Response,
     send403Response,
     send401Response,
