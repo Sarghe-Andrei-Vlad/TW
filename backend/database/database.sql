@@ -33,14 +33,12 @@ CREATE TABLE IF NOT EXISTS Footwear (
     image_url VARCHAR(255)
 );
 
-CREATE TABLE IF NOT EXISTS Recommendations (
+CREATE TABLE IF NOT EXISTS Reviews (
     RecommendationID INT PRIMARY KEY AUTO_INCREMENT,
-    UserID INT,
     FootwearID INT,
-    occasion VARCHAR(50) NOT NULL,
     recommendation_description TEXT,
+    review TEXT,
     rating INT,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID),
     FOREIGN KEY (FootwearID) REFERENCES Footwear(FootwearID)
 );
 

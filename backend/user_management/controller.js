@@ -13,7 +13,7 @@ const pool = mysql.createPool({
     database: 'fosa_database'
 });
 
-const itemsPerPage = 6;
+const itemsPerPage = 18;
 
 pool.on('error', (err) => {
     console.error('Database error:', err);
@@ -206,16 +206,14 @@ async function handleFetchImages(request, response) {
     const page = parseInt(reqUrl.query.page) || 1;
     const offset = (page - 1) * itemsPerPage;
 
-    pool.query(`SELECT image_url FROM Footwear ORDER BY RAND() LIMIT ?, ?`, [offset, itemsPerPage], (err, results) => {
+    pool.query(`SELECT * FROM Footwear ORDER BY RAND() LIMIT ?, ?`, [offset, itemsPerPage], (err, results) => {
         if (err) {
             response.writeHead(500, { 'Content-Type': 'application/json' });
             response.end(JSON.stringify({ error: 'Internal Server Error' }));
             console.error(err);
             return;
         }
-
         console.log('Fetched image URLs:', results);
-
         response.writeHead(200, { 'Content-Type': 'application/json' });
         response.end(JSON.stringify(results));
     });
