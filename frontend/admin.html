@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page - Delete User</title>
+</head>
+
+<body>
+    <h1>Delete User</h1>
+    <input type="text" placeholder="Enter username" id="username" required>
+    <button id="deleteBtn">Delete User</button>
+
+    <script>
+        let address = "http://localhost";
+        document.getElementById("deleteBtn").addEventListener("click", function () {
+            const username = document.getElementById("username").value;
+            if (username) {
+                let url = address + ':8001/delete-user';
+                fetch(url, {
+                    method: 'DELETE',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username: username })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'User deleted successfully') {
+                            alert('User deleted successfully');
+                        } else {
+                            alert('Failed to delete user');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            } else {
+                alert('Please enter a username');
+            }
+        });
+    </script>
+</body>
+
+</html>

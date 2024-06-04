@@ -87,6 +87,25 @@ function addReview(FootwearID, recommendation_description, review, rating) {
     })
 }
 
+function removeUser(username) {
+    return new Promise(function (resolve, reject) {
+        var mysql = require('mysql2');
+        
+        const con = mysql.createConnection({ host: 'localhost', user: 'root', password: 'root', database: 'fosa_database' });
+
+        con.connect(function (err) {
+            if (err) return reject(err);
+            console.log("Connected!");
+        });
+
+        con.query('DELETE FROM Users WHERE username = ?', [username], function (err, results) {
+            if (err) return reject(err);
+            con.end();
+            resolve(results.affectedRows > 0);
+        });
+    });
+}
+
 module.exports.checkStatus = function (username) {
     return new Promise(function (resolve, reject) {
         var mysql = require('mysql2');
@@ -215,3 +234,15 @@ module.exports.review = function (FootwearID, recommendation_description, review
     })
 }
 
+module.exports.deleteUser = function (username) {
+    return new Promise(function (resolve, reject) {
+        console.log("Deleting user with ID: " + username);
+        removeUser(username).then(function (bool) {
+            if (bool) {
+                resolve('User deleted successfully');
+            } else {
+                reject('Failed to delete user');
+            }
+        }).catch((err) => setImmediate(() => { console.log(err); reject(err); }));
+    });
+}

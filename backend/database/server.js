@@ -20,6 +20,8 @@ function onRequest(request, response) {
         controller.handleReview(request, response);
     } else if (request.method === 'POST' && reqUrl.pathname === '/logout') {
         controller.handleLogout(request, response);
+    } else if (request.method === 'DELETE'&& reqUrl.pathname === '/delete-user') {
+        controller.handleDelete(request,response);
     } else if (request.method === 'GET' && reqUrl.pathname.startsWith('/getId')) {
         controller.handleGetId(request, response);
     } else if (request.method === 'GET' && reqUrl.pathname.startsWith('/getUsername')) {
