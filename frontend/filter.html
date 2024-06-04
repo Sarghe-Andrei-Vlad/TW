@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="styles/filter-styles.css">
     <script src="scripts/sidemenu-script.js"></script>
     <script src="scripts/logout-script.js"></script>
-    <script src="scripts/pagination-script.js"></script>
 </head>
 
 <body>
@@ -28,8 +27,7 @@
     <nav class="side-menu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="filter.html">Products & Outfits</a></li>
-            <li><a href="#">Suggestions & Sharing</a></li>
+            <li><a href="filter.html">Footwear Recommendations</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="#" id="logout-link">Logout</a></li>
@@ -42,75 +40,75 @@
             <h2>Here are the most popular choices this season</h2>
         </div>
 
-            <div id="recommendation-filter">
-                <div class="filter-category" onclick="toggleDropdown('season')">
-                  <h3>Season</h3>
-                  <div id="season" class="dropdown">
+        <div id="recommendation-filter">
+            <div class="filter-category" onclick="toggleDropdown('season')">
+                <h3>Season</h3>
+                <div id="season" class="dropdown">
                     <div class="option" onclick="selectOption(this)">Spring</div>
                     <div class="option" onclick="selectOption(this)">Summer</div>
                     <div class="option" onclick="selectOption(this)">Autumn</div>
                     <div class="option" onclick="selectOption(this)">Winter</div>
-                  </div>
                 </div>
-                <div class="filter-category" onclick="toggleDropdown('weather')">
-                  <h3>Weather</h3>
-                  <div id="weather" class="dropdown">
+            </div>
+            <div class="filter-category" onclick="toggleDropdown('weather')">
+                <h3>Weather</h3>
+                <div id="weather" class="dropdown">
                     <div class="option" onclick="selectOption(this)">Sunny</div>
                     <div class="option" onclick="selectOption(this)">Rainy</div>
                     <div class="option" onclick="selectOption(this)">Cold</div>
                     <div class="option" onclick="selectOption(this)">Windy</div>
                     <div class="option" onclick="selectOption(this)">Snowy</div>
-                  </div>
                 </div>
-                <div class="filter-category" onclick="toggleDropdown('gender')">
-                    <h3>Gender</h3>
-                    <div id="gender" class="dropdown">
-                      <div class="option" onclick="selectOption(this)">Male</div>
-                      <div class="option" onclick="selectOption(this)">Female</div>
-                      <div class="option" onclick="selectOption(this)">Unisex</div>
-                    </div>
+            </div>
+            <div class="filter-category" onclick="toggleDropdown('gender')">
+                <h3>Gender</h3>
+                <div id="gender" class="dropdown">
+                    <div class="option" onclick="selectOption(this)">Male</div>
+                    <div class="option" onclick="selectOption(this)">Female</div>
+                    <div class="option" onclick="selectOption(this)">Unisex</div>
                 </div>
-                <div class="filter-category" onclick="toggleDropdown('age')">
-                    <h3>Age</h3>
-                    <div id="age" class="dropdown">
-                      <div class="option" onclick="selectOption(this)">Child</div>
-                      <div class="option" onclick="selectOption(this)">Teen</div>
-                      <div class="option" onclick="selectOption(this)">Adult</div>
-                    </div>
+            </div>
+            <div class="filter-category" onclick="toggleDropdown('age')">
+                <h3>Age</h3>
+                <div id="age" class="dropdown">
+                    <div class="option" onclick="selectOption(this)">Child</div>
+                    <div class="option" onclick="selectOption(this)">Teen</div>
+                    <div class="option" onclick="selectOption(this)">Adult</div>
                 </div>
-                <div class="filter-category" onclick="toggleDropdown('color')">
-                    <h3>Color</h3>
-                    <div id="color" class="dropdown">
-                      <div class="option" onclick="selectOption(this)">Black</div>
-                      <div class="option" onclick="selectOption(this)">White</div>
-                      <div class="option" onclick="selectOption(this)">Brown</div>
-                      <div class="option" onclick="selectOption(this)">Grey</div>
-                      <div class="option" onclick="selectOption(this)">Navy</div>
-                      <div class="option" onclick="selectOption(this)">Pink</div>
-                      <div class="option" onclick="selectOption(this)">Purple</div>
-                      <div class="option" onclick="selectOption(this)">Red</div>
-                      <div class="option" onclick="selectOption(this)">Green</div>
-                      <div class="option" onclick="selectOption(this)">Light blue</div>
-                    </div>
+            </div>
+            <div class="filter-category" onclick="toggleDropdown('color')">
+                <h3>Color</h3>
+                <div id="color" class="dropdown">
+                    <div class="option" onclick="selectOption(this)">Black</div>
+                    <div class="option" onclick="selectOption(this)">White</div>
+                    <div class="option" onclick="selectOption(this)">Brown</div>
+                    <div class="option" onclick="selectOption(this)">Grey</div>
+                    <div class="option" onclick="selectOption(this)">Navy</div>
+                    <div class="option" onclick="selectOption(this)">Pink</div>
+                    <div class="option" onclick="selectOption(this)">Purple</div>
+                    <div class="option" onclick="selectOption(this)">Red</div>
+                    <div class="option" onclick="selectOption(this)">Green</div>
+                    <div class="option" onclick="selectOption(this)">Light blue</div>
                 </div>
-                <div class="filter-category" onclick="toggleDropdown('pattern')">
-                    <h3>Pattern</h3>
-                    <div id="pattern" class="dropdown">
-                      <div class="option" onclick="selectOption(this)">Plain</div>
-                      <div class="option" onclick="selectOption(this)">Dots</div>
-                      <div class="option" onclick="selectOption(this)">Stripes</div>
-                    </div>
+            </div>
+            <div class="filter-category" onclick="toggleDropdown('pattern')">
+                <h3>Pattern</h3>
+                <div id="pattern" class="dropdown">
+                    <div class="option" onclick="selectOption(this)">Plain</div>
+                    <div class="option" onclick="selectOption(this)">Dots</div>
+                    <div class="option" onclick="selectOption(this)">Stripes</div>
                 </div>
-              </div>
+            </div>
+        </div>
 
         <div class="gallery-container">
             <h2 class="title">Shoe gallery</h2>
-            <div id ="shoe-gallery" class="photo-gallery">
+            <div id="shoe-gallery" class="photo-gallery">
             </div>
         </div>
 
         <div id="pagination-controls" class="pagination-controls">
-            
+
         </div>
     </main>
 
@@ -127,8 +125,108 @@
         <p>&copy; 2024 Shoe Recommendation Platform. All rights reserved.</p>
     </footer>
 
-    <script src="scripts/filter-dropdown-script.js"></script>
-    <!-- <script src="scripts/image-fetch-script.js"></script> -->
+    <script>
+        const filterVariables = {
+            season: [],
+            weather: [],
+            gender: [],
+            age: [],
+            color: [],
+            pattern: []
+        };
+
+        const galleryContainer = document.getElementById('shoe-gallery');
+        const paginationControls = document.getElementById('pagination-controls');
+        const shoesPerPage = 6;
+        let allImages = [];
+        let filterImages = [];
+
+        const fetchImages = async () => {
+            try {
+                const response = await fetch(`http://127.0.0.1:8001/images`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                allImages = await response.json();
+                if (filterVariables) {
+                    filterImages = allImages.filter(image => {
+                        for (let key in filterVariables) {
+                            if (filterVariables[key] && filterVariables[key].length > 0 && !filterVariables[key].includes(image[key])) {
+                                return false
+                            }
+                        } return true;
+                    });
+                }
+                if (Array.isArray(allImages)) {
+                    const totalPages = Math.ceil(Object.values(filterVariables).flat().length ? filterImages.length / shoesPerPage : allImages.length / shoesPerPage);
+                    updatePaginationControls(1, totalPages);
+                    displayImages(1, Object.values(filterVariables).flat().length ? filterImages : allImages);
+                } else {
+                    console.error('Invalid response structure:', allImages);
+                }
+            } catch (error) {
+                console.error('Failed to fetch images:', error);
+            }
+        };
+
+        const displayImages = (page, images) => {
+            galleryContainer.innerHTML = '';
+            const start = (page - 1) * shoesPerPage;
+            const end = start + shoesPerPage;
+            const currentShoes = images.slice(start, end);
+
+            let columnContent = '';
+
+            currentShoes.forEach((image, index) => {
+                if (index % 2 === 0) columnContent += '<div class="column">';
+                columnContent += `<div class="photo"><a href="shoe-page.html?image_url=${encodeURIComponent(image.image_url)}&description=${encodeURIComponent(`These ${image.type || `kicks`} are the perfect ${image.sex || ``} ${image.age || ``} shoes. \n With their ${image.color || `color`} nouances and a nice ${image.personal_style || `style and`} ${image.pattern || ``} pattern, \n they can be worn any ${image.weather || ``} day of ${image.season || `this season`}. \n Please leave our recommandation a review below. \n Thank you!!!`)}"><img src="${image.image_url}" alt=""></a></div>`;
+                if (index % 2 === 1 || index === currentShoes.length - 1) columnContent += '</div>';
+            });
+
+            galleryContainer.innerHTML = columnContent;
+        };
+
+        const updatePaginationControls = (currentPage, totalPages) => {
+            paginationControls.innerHTML = '';
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                if (i === currentPage) {
+                    button.disabled = true;
+                }
+                button.addEventListener('click', () => {
+                    displayImages(i, allImages);
+                    updatePaginationControls(i, totalPages);
+                });
+                paginationControls.appendChild(button);
+            }
+        };
+
+        fetchImages();
+
+        const toggleDropdown = (categoryId) => {
+            var dropdown = document.getElementById(categoryId);
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        }
+
+        const selectOption = (option) => {
+            option.classList.toggle('selected');
+            event.stopPropagation();
+
+            option.closest('.dropdown').style.display = 'block';
+
+            if (filterVariables[option.parentNode.id].includes(option.innerText.toLowerCase())) {
+                const index = filterVariables[option.parentNode.id].indexOf(option.innerText.toLowerCase());
+                filterVariables[option.parentNode.id].splice(index, 1);
+            }
+            else {
+                filterVariables[option.parentNode.id].push(option.innerText.toLowerCase());
+            }
+
+            fetchImages()
+        }
+    </script>
+
 </body>
 
 </html>
