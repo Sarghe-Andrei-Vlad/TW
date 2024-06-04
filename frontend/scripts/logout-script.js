@@ -16,19 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                     body: JSON.stringify({ token })
                 })
-                .then((resp) => {
-                    if (resp.status === 200) {
-                        localStorage.removeItem('jwt');
-                        alert('Logout successful!');
-                        window.location.href = 'index.html';
-                    } else {
-                        alert('Logout failed. Please try again.');
-                    }
-                })
-                .catch((err) => {
-                    console.error('Error during logout:', err);
-                    alert('An error occurred during logout. Please try again later.');
-                });
+                    .then((resp) => {
+                        if (resp.status === 200) {
+                            localStorage.removeItem('jwt');
+                            alert('Logout successful!');
+                            window.location.href = 'index.html';
+                        } else {
+                            alert('Logout failed. Please try again.');
+                        }
+                    })
+                    .catch((err) => {
+                        console.error('Error during logout:', err);
+                        alert('An error occurred during logout. Please try again later.');
+                    });
             } else {
                 alert('No token found. Please log in first.');
             }

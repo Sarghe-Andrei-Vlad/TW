@@ -108,14 +108,14 @@ async function handleLogin(request, response) {
 
 async function handleLogout(request, response) {
     let body = '';
-    request.on('data', chunk => { 
-        console.log('Receiving chunk:', chunk); // Log each chunk received
-        body += chunk; 
+    request.on('data', chunk => {
+        console.log('Receiving chunk:', chunk);
+        body += chunk;
     });
-    
+
     request.on('end', () => {
         try {
-            console.log('Complete body received:', body); // Log the complete body received
+            console.log('Complete body received:', body);
             if (body) {
                 body = JSON.parse(body);
                 const token = body.token;
@@ -136,6 +136,26 @@ async function handleLogout(request, response) {
             response.writeHead(500, { 'Content-Type': 'application/json' });
             response.write(JSON.stringify({ error: 'Internal Server Error' }));
             response.end();
+        }
+    });
+}
+
+async function handleDelete(request, response) {
+    let body = '';
+    request.on('data', chunk => { body += chunk; });
+    request.on('end', async () => {
+        body = JSON.parse(body);
+        console.log(body);
+        console.log('Received delete request:', body);
+        try {
+            const message = await model.deleteUser(body['username']);
+            let json = { "status": message };
+            response.writeHead(200, jsonType);
+            response.write(JSON.stringify(json));
+            response.end();
+        } catch (err) {
+            send500Response(response);
+            console.log(err);
         }
     });
 }
@@ -167,7 +187,7 @@ async function handleReview(request, response) {
         body = JSON.parse(body);
         console.log('Received review request:', body);
         try {
-            const message = await model.review(body['FootwearID'],body['recommendation_description'], body['review'],body[`rating`]);
+            const message = await model.review(body['FootwearID'], body['recommendation_description'], body['review'], body[`rating`]);
             let json = { "status": message };
             response.writeHead(200, jsonType);
             response.write(JSON.stringify(json));
@@ -242,6 +262,7 @@ module.exports = {
     handleLogin,
     handleLogout,
     handleRegister,
+    handleDelete,
     handleGetId,
     handleGetUsername,
     handleFetchImages,
