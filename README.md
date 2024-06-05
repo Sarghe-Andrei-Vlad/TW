@@ -375,11 +375,17 @@ Legal Requirements: The website complies with international laws regarding e-com
 Reuse Objectives: The project develops reusable components that can be easily integrated into other projects or future versions of the website, promoting efficient development practices.
 ### Appendix A: Glossary
 FoSA: Footwear Smart Assistant
+
 GDPR: General Data Protection Regulation
+
 HTML: HyperText Markup Language
+
 CSS: Cascading Style Sheets
+
 Sass: Syntactically Awesome Style Sheets
+
 Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine
+
 MySQL: An open-source relational database management system
 <!-- ### Appendix B: Analysis Models
 To be reviewed...
