@@ -247,41 +247,45 @@ These factors could impact the project if assumptions prove incorrect or depende
 ### 3.2 Hardware Interfaces
 The Footwear Smart Assistant (FoSA) website interacts with various hardware components to deliver a seamless user experience.
 
-- Supported Device Types:
+1. Supported Device Types:
 
 The FoSA website supports a wide range of device types to ensure accessibility and usability across different platforms. The supported devices include:
 
-1. Desktop Computers: Includes devices running on Windows, macOS, and Linux operating systems.
-2. Laptops: Includes devices running on Windows, macOS, and Linux operating systems.
-3. Tablets: Includes devices running on iOS, Android, and Windows operating systems.
+- Desktop Computers: Includes devices running on Windows, macOS, and Linux operating systems.
+- Laptops: Includes devices running on Windows, macOS, and Linux operating systems.
+- Tablets: Includes devices running on iOS, Android, and Windows operating systems.
 
-- Logical Characteristics:
+2. Logical Characteristics:
 
-1. Responsive Design: The website uses responsive web design techniques to adapt to different screen sizes and resolutions, ensuring a consistent user experience across all device types.
-2. Web Browsers: The website supports major web browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge, and Opera. Compatibility is ensured through thorough testing and adherence to web standards.
-3. User Interaction: Input methods include mouse and keyboard for desktops and laptops, and touch input for tablets and smartphones. The website's interface adjusts accordingly to provide optimal usability.
+- Responsive Design: The website uses responsive web design techniques to adapt to different screen sizes and resolutions, ensuring a consistent user experience across all device types.
+- Web Browsers: The website supports major web browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge, and Opera. Compatibility is ensured through thorough testing and adherence to web standards.
+- User Interaction: Input methods include mouse and keyboard for desktops and laptops, and touch input for tablets and smartphones. The website's interface adjusts accordingly to provide optimal usability.
 
-- Physical Characteristics:
+3. Physical Characteristics:
 
-1. Server-Side Components:
+- Server-Side Components:
+
 Web Server: The website is hosted on a web server that handles HTTP/HTTPS requests and serves web pages to users. It uses Node.js to manage server-side logic and interactions with the database.
 
 Database Server: A MySQL database server stores all the footwear, user, reviews, and statistics data. The database server communicates with the Node.js application through the MySQL2 library.
 
-2. Client-Side Components:
+- Client-Side Components:
+
 User Devices: The website is accessed via web browsers on user devices. The client-side code, written in HTML, CSS (and Sass), and JavaScript, runs on these devices to render the web pages and handle user interactions.
 
-3. Data and Control Interactions:
+- Data and Control Interactions:
+
 Data Requests: Users' actions, such as searching for footwear or applying filters, generate data requests sent from the client-side to the server-side. These requests are processed by Node.js, which interacts with the MySQL database to fetch or update data.
 
 Data Responses: The server responds with the requested data or confirmation of data updates, which the client-side code then uses to update the user interface dynamically.
 
 Security Protocols: Communication between user devices and the web server is secured using HTTPS, ensuring data integrity and confidentiality. The use of public and private keys for user authentication further enhances security.
 
-Communication Protocols
+4. Communication Protocols
 
-1. HTTP/HTTPS: The primary communication protocol for interactions between user devices and the web server. HTTPS is used to encrypt data transmitted over the network.
-2. Database Connectivity: The Node.js application communicates with the MySQL database using the MySQL2 library, which provides a reliable and efficient interface for database operations.
+- HTTP/HTTPS: The primary communication protocol for interactions between user devices and the web server. HTTPS is used to encrypt data transmitted over the network.
+
+- Database Connectivity: The Node.js application communicates with the MySQL database using the MySQL2 library, which provides a reliable and efficient interface for database operations.
 ### 3.3 Software Interfaces
 The minimum software requirements of Footwear Smart Assistant are a working browser and a connection to the Internet.
 ### 3.4 Communications Interfaces
