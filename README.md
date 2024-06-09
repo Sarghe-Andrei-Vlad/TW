@@ -27,7 +27,7 @@ Table of Contents
     * 2.5 [Design and Implementation Constraints](#25-design-and-implementation-constraints)
     * 2.6 [User Documentation](#26-user-documentation)
     * 2.7 [Assumptions and Dependencies](#27-assumptions-and-dependencies)
-    * 2.8 [Web Application Architecture Diagram] (#28-web-application-architecture-diagram)
+    * 2.8 [Web Application Architecture Diagram](#28-web-application-architecture-diagram)
   * [External Interface Requirements](#external-interface-requirements)
     * 3.1 [User Interfaces](#31-user-interfaces)
     * 3.2 [Hardware Interfaces](#32-hardware-interfaces)
